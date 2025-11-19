@@ -156,9 +156,15 @@ body {
 }
 
 @media (max-width: 968px) {
+    .hero {
+        min-height: auto;
+        padding: 100px 20px 50px;
+    }
+
     .hero-container {
         flex-direction: column;
         text-align: center;
+        gap: 30px;
     }
 
     .hero-content {
@@ -166,7 +172,13 @@ body {
     }
 
     .hero-image {
-        max-width: 400px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-height: 500px;
+        object-fit: contain;
     }
 }
 
