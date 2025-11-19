@@ -57,11 +57,11 @@ class DisintegrationEffect {
         this.ctx.textAlign = 'center';
         this.ctx.textBaseline = 'middle';
 
-        // Gradient for text
+        // Gradient for text (Dark Blue for White Theme)
         const gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
-        gradient.addColorStop(0, '#FFFFFF');
-        gradient.addColorStop(0.5, '#3B82F6');
-        gradient.addColorStop(1, '#0055FF');
+        gradient.addColorStop(0, '#0F172A');
+        gradient.addColorStop(0.5, '#0055FF');
+        gradient.addColorStop(1, '#1E40AF');
         this.ctx.fillStyle = gradient;
 
         // Draw text (handling multi-line)
