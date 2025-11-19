@@ -121,6 +121,7 @@ body {
     position: relative;
     padding: 120px 20px 150px;
     background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+    background-attachment: fixed;
     overflow: visible;
 }
 
@@ -143,8 +144,6 @@ body {
 .hero-image {
     flex: 1;
     max-width: 500px;
-    position: sticky;
-    top: 120px;
 }
 
 .hero-image img {
