@@ -125,11 +125,47 @@ body {
 }
 
 .hero-container {
-    max-width: 900px;
-    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
     position: relative;
     z-index: 2;
     overflow: visible;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+}
+
+@media (max-width: 968px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 400px;
+    }
 }
 
 .discount-banner {
