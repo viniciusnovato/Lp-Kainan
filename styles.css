@@ -143,6 +143,8 @@ body {
 .hero-image {
     flex: 1;
     max-width: 500px;
+    position: sticky;
+    top: 120px;
 }
 
 .hero-image img {
