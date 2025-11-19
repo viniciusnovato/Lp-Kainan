@@ -17,14 +17,14 @@ document.querySelectorAll('.faq-item').forEach(item => {
     const question = item.querySelector('.faq-question');
     question.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
-        
+
         // Fecha todos os outros itens
         document.querySelectorAll('.faq-item').forEach(otherItem => {
             if (otherItem !== item) {
                 otherItem.classList.remove('active');
             }
         });
-        
+
         // Toggle do item atual
         item.classList.toggle('active', !isActive);
     });
@@ -36,15 +36,15 @@ const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
-        navbar.style.background = 'rgba(10, 14, 39, 0.98)';
-        navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
     } else {
-        navbar.style.background = 'rgba(10, 14, 39, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.style.background = 'rgba(255, 255, 255, 0.8)';
+        navbar.style.boxShadow = '0 1px 2px 0 rgb(0 0 0 / 0.05)';
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -80,18 +80,18 @@ document.querySelectorAll('.btn-primary, .btn-pricing, .btn-nav').forEach(button
         const size = Math.max(rect.width, rect.height);
         const x = e.clientX - rect.left - size / 2;
         const y = e.clientY - rect.top - size / 2;
-        
+
         ripple.style.width = ripple.style.height = size + 'px';
         ripple.style.left = x + 'px';
         ripple.style.top = y + 'px';
         ripple.classList.add('ripple');
-        
+
         button.appendChild(ripple);
-        
+
         setTimeout(() => {
             ripple.remove();
         }, 600);
-        
+
         // Aqui você pode adicionar a lógica de redirecionamento ou modal
         console.log('Botão clicado:', button.textContent);
     });
@@ -175,7 +175,7 @@ function initMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
     const navContainer = document.querySelector('.nav-container');
     let menuButton = document.querySelector('.menu-toggle');
-    
+
     // Criar ou remover botão de menu mobile baseado no tamanho da tela
     if (window.innerWidth <= 768) {
         if (!menuButton) {
@@ -194,7 +194,7 @@ function initMobileMenu() {
                 z-index: 1001;
             `;
             navContainer.appendChild(menuButton);
-            
+
             menuButton.addEventListener('click', () => {
                 navLinks.classList.toggle('active');
             });
