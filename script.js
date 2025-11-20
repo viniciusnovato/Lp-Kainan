@@ -123,16 +123,25 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Parallax effect no hero
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const heroContent = hero.querySelector('.hero-container');
-        if (heroContent && scrolled < window.innerHeight) {
-            heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-            heroContent.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
-        }
+// Parallax effect no hero - DESABILITADO para evitar sobreposição de sections
+// window.addEventListener('scroll', () => {
+//     const scrolled = window.pageYOffset;
+//     const hero = document.querySelector('.hero');
+//     if (hero) {
+//         const heroContent = hero.querySelector('.hero-container');
+//         if (heroContent && scrolled < window.innerHeight) {
+//             heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+//             heroContent.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
+//         }
+//     }
+// });
+
+// Garantir que o hero-container não tenha transform aplicado
+window.addEventListener('load', () => {
+    const heroContent = document.querySelector('.hero-container');
+    if (heroContent) {
+        heroContent.style.transform = 'none';
+        heroContent.style.opacity = '1';
     }
 });
 
