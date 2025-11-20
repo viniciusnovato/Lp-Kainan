@@ -612,7 +612,7 @@ ul {
 
 @media (max-width: 768px) {
     .timeline-item {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
     }
 
