@@ -665,6 +665,7 @@ ul {
     position: relative;
     width: 100%;
     z-index: 1;
+    overflow: visible;
 }
 
 .section-subtitle {
@@ -680,6 +681,8 @@ ul {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 50px;
+    overflow: visible;
+    width: 100%;
 }
 
 .testimonial-card {
@@ -690,10 +693,12 @@ ul {
     border: 1px solid var(--glass-border);
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 .testimonial-card:hover {
@@ -708,6 +713,8 @@ ul {
     display: block;
     border-radius: 20px;
     object-fit: contain;
+    max-width: 100%;
+    position: relative;
 }
 
 /* Community Section */
@@ -1013,19 +1020,30 @@ ul {
         z-index: 1;
     }
     
+    .testimonials-section {
+        overflow: visible;
+    }
+    
     .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        overflow: visible;
+        width: 100%;
     }
     
     .testimonial-card {
         padding: 0;
+        overflow: visible;
+        width: 100%;
+        max-width: 100%;
     }
     
     .testimonial-image {
         width: 100%;
         height: auto;
         border-radius: 20px;
+        max-width: 100%;
+        position: relative;
     }
     
     .section-subtitle {
