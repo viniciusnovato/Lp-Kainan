@@ -99,7 +99,9 @@ ul {
 
 /* Buttons */
 .btn-primary {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: var(--success-green);
     color: #FFFFFF;
     padding: 16px 32px;
@@ -175,6 +177,9 @@ ul {
 }
 
 .btn-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: var(--bg-light-gray);
     color: var(--text-dark);
     padding: 10px 20px;
@@ -941,6 +946,40 @@ ul {
     width: 100%;
 }
 
+/* Botão Flutuante WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    background: #20BA5A;
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+}
+
 /* Responsive Design - Mobile First */
 @media (max-width: 768px) {
     .container {
@@ -1159,5 +1198,17 @@ ul {
 
     .logo-text {
         font-size: 1.2rem;
+    }
+    
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
     }
 }
